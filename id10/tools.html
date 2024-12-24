@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Tools</title>
+  <link rel="stylesheet" href="css/main.css"> <!-- Global Styles -->
+  <link rel="stylesheet" href="css/tools.css"> <!-- Student Tools specific styles -->
+</head>
+
+<body>
+  <header class="header">
+    <h1>Student Tools</h1>
+    <button onclick="location.href='dashboard.html'" class="back-btn">Back to Dashboard</button>
+  </header>
+
+  <main class="main-content">
+    <!-- To-Do List Section -->
+    <section class="todo-section">
+      <h2 class="section-title">To-Do List</h2>
+      <div class="tasks-summary">
+        <h3>Tasks Summary</h3>
+        <p>Today: <span id="tasks-today">0</span> tasks | Completed: <span id="tasks-completed">0</span></p>
+      </div>
+      <div class="task-list" id="task-list"></div>
+      <div class="add-task">
+        <input type="text" id="task-input" class="task-input" placeholder="Enter a new task" />
+        <button id="add-task-btn" class="btn">Add Task</button>
+      </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <h2 class="section-title">Notes</h2>
+      <textarea id="notes-text" class="notes-textarea" placeholder="Write your notes here..."></textarea>
+      <p id="word-count">Word Count: 0</p>
+    </section>
+
+    <!-- Grade Calculator Section -->
+    <section class="grade-calculator-section">
+      <h2 class="section-title">Grade Calculator</h2>
+      <form id="grade-form" class="form">
+        <label for="grade-name" class="form-label">Course Name:</label>
+        <input type="text" id="grade-name" class="form-input" required>
+        
+        <label for="grade-score" class="form-label">Grade (%):</label>
+        <input type="number" id="grade-score" class="form-input" min="0" max="100" required>
+        
+        <label for="grade-credits" class="form-label">Credits:</label>
+        <input type="number" id="grade-credits" class="form-input" min="1" required>
+        
+        <button type="submit" class="btn">Add Grade</button>
+      </form>
+
+      <h3 class="section-subtitle">Grades:</h3>
+      <ul id="grade-list" class="grade-list"></ul>
+      
+      <h3 class="section-subtitle">Final Grade:</h3>
+      <p id="final-grade">0.00</p>
+    </section>
+
+    <!-- Exam Section -->
+    <section class="exams-section">
+      <h2 class="section-title">Exams</h2>
+      <div class="exam-entry">
+        <label for="exam-name" class="form-label">Exam Name:</label>
+        <input type="text" id="exam-name" class="form-input" required>
+        
+        <label for="exam-date" class="form-label">Exam Date:</label>
+        <input type="date" id="exam-date" class="form-input" required>
+        
+        <button type="button" id="add-exam-btn" class="btn">Add Exam</button>
+      </div>
+
+      <h3 class="section-subtitle">Upcoming Exams:</h3>
+      <ul id="exam-list" class="exam-list"></ul>
+    </section>
+
+    <!-- Assignment Section -->
+    <section class="assignments-section">
+      <h2 class="section-title">Assignments</h2>
+      <div class="assignment-entry">
+        <label for="assignment-name" class="form-label">Assignment Name:</label>
+        <input type="text" id="assignment-name" class="form-input" required>
+        
+        <label for="assignment-due" class="form-label">Due Date:</label>
+        <input type="date" id="assignment-due" class="form-input" required>
+        
+        <button type="button" id="add-assignment-btn" class="btn">Add Assignment</button>
+      </div>
+
+      <h3 class="section-subtitle">Assignments:</h3>
+      <ul id="assignment-list" class="assignment-list"></ul>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="goals-section">
+      <h2 class="section-title">Goals</h2>
+      <ul id="goal-list" class="goal-list"></ul>
+      <button id="add-goal" class="btn">Add Goal</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Student Tools Page</p>
+  </footer>
+
+  <script src="js/tools.js"></script> <!-- Student tools specific JavaScript -->
+</body>
+
+</html>

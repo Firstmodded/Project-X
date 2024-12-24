@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
 </head>
+
 <body>
-    <h1>hi</h1>
+  <header>
+    <h1>Welcome, [Student Name]</h1>
+    <p>Semester: 2 | Year: 2024</p>
+    <button onclick="location.href='login.html'">Logout</button>
+  </header>
+
+  <main>
+    <!-- User Profile and Settings Links -->
+    <section class="user-links">
+      <a href="profile.html" class="link-button">Profile</a>
+      <a href="settings.html" class="link-button">Settings</a>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+      <h2>Quick Links</h2>
+      <a href="tools.html" id="to-do-link" class="link-button">Student Tools</a>
+      <a href="resources.html" id="resources-link" class="link-button">Resources</a>
+    </section>
+
+    <!-- Notifications Section -->
+    <section id="notifications">
+      <h3>Upcoming Deadlines</h3>
+      <ul>
+        <li>Assignment 1 due: 10/10</li>
+        <li>Exam 1: 15/10</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Student Dashboard</p>
+  </footer>
+
+  <script src="js/main.js"></script> <!-- For global functionality -->
+  <script src="js/dashboard.js"></script> <!-- For dashboard-specific functionality -->
 </body>
+
 </html>
